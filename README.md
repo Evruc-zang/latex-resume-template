@@ -67,6 +67,7 @@ Tips:
 .
 ├── resume.tex                  # the template
 ├── preview.png                 # rendered preview used in this README
+├── LICENSE                     # MIT
 └── .github/workflows/build.yml # CI: compiles the PDF and uploads it as an artifact
 ```
 
@@ -80,3 +81,8 @@ spotting LaTeX errors without a local toolchain.
 
 Layout inspired by common academic resume templates; typesetting code written from
 scratch with `tabularx` + `titlesec`.
+
+## License
+
+Released under the [MIT License](LICENSE) — free to use, modify and redistribute,
+including commercially, as long as the copyright notice is retained.
