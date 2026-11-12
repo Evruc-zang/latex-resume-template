@@ -67,8 +67,7 @@ Tips:
 .
 ├── resume.tex                  # the template
 ├── preview.png                 # rendered preview used in this README
-├── .github/workflows/build.yml # CI: compiles the PDF and uploads it as an artifact
-└── personal/                   # author's filled-in resume (kept for reference)
+└── .github/workflows/build.yml # CI: compiles the PDF and uploads it as an artifact
 ```
 
 ## Continuous integration
