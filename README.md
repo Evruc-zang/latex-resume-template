@@ -1,5 +1,7 @@
 # LaTeX English Resume Template
 
+[![Build resume PDF](https://github.com/Evruc-zang/latex-resume-template/actions/workflows/build.yml/badge.svg)](https://github.com/Evruc-zang/latex-resume-template/actions/workflows/build.yml)
+
 A clean, single-column academic English resume (CV) template built with XeLaTeX.
 It uses a classic Times-style layout: a centered header, bold section headings with
 a thin rule, and one tight two-column macro for every "title + date" line, so the
