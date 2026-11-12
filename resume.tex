@@ -1,0 +1,149 @@
+% !TEX program = xelatex
+% ---------------------------------------------------------------------------
+% Academic English Resume / CV Template
+% Compile with:  xelatex resume.tex     (or: latexmk -xelatex resume.tex)
+%
+% Everything below is sample content. Replace the strings marked with
+% "REPLACE" comments with your own information; the layout adapts itself.
+% ---------------------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------------- page layout -------------------------------
+\usepackage[left=1.7cm,right=1.7cm,top=1.4cm,bottom=1.4cm]{geometry}
+
+% --------------------------------- fonts -----------------------------------
+% Times New Roman when available (Windows/macOS), otherwise TeX Gyre Termes,
+% so the document also builds on stock TeX Live / Overleaf.
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}
+  {\setmainfont{Times New Roman}}
+  {\setmainfont{TeX Gyre Termes}}
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.1}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+
+% ------------- section headings: bold title with a rule underneath ---------
+\titleformat{\section}
+  {\large\bfseries}
+  {}{0pt}{}
+  [\vspace{-0.55em}\rule{\textwidth}{1pt}]
+\titlespacing*{\section}{0pt}{0.55em}{0.35em}
+
+% ----------------------------- helper columns ------------------------------
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% Two-column heading: text on the left, date (or city) on the right.
+% Wrap short right-hand strings in \mbox{} so they never break across lines.
+\newcommand{\cvline}[2]{%
+  \par\addvspace{2.5pt}%
+  \begin{tabularx}{\textwidth}{@{}Y R{4.3cm}@{}}#1 & #2\end{tabularx}}
+
+% Bullet list used throughout the resume.
+\newenvironment{cvitems}
+  {\begin{itemize}[leftmargin=1.5em,itemsep=1pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet]}
+  {\end{itemize}}
+
+\begin{document}
+
+% ================================= HEADER ==================================
+% REPLACE: name, phone, email and address.
+\begin{center}
+  {\Huge\bfseries Your Name}\\[6pt]
+  Phone: (+00) 000-0000-0000 \quad|\quad Email: \href{mailto:your.email@example.com}{your.email@example.com}\\
+  Street, District, City, Province, Country
+\end{center}
+
+% ================================ EDUCATION ================================
+\section*{Education Background}
+
+% REPLACE: university, city, degree, dates.
+\cvline{\textbf{Example University}}{\textit{City, Country}}
+\begin{tabularx}{\textwidth}{@{}Y R{4.3cm}@{}}
+  Ph.D. in Your Field & \mbox{\textit{Sept. 2027 (Expected)}}
+\end{tabularx}
+\vspace{1pt}
+\textbf{Research Interests:} Research Area One, Research Area Two, Research Area Three.
+
+\cvline{\textbf{Example University}}{\textit{City, Country}}
+\begin{tabularx}{\textwidth}{@{}Y R{3.4cm} R{4.3cm}@{}}
+  B.Sc. in Your Major & \textbf{GPA: 00.00/100} & \mbox{\textit{Sept. 2023 -- Jun. 2027}}
+\end{tabularx}
+\vspace{1pt}
+\textbf{Core Coursework:} Course A (95), Course B (95), Course C (95), Course D (90).
+
+% =============================== RESEARCH =================================
+\section*{Research Experience}
+
+% REPLACE: project title, role, date, advisor and bullet points.
+\cvline{\textbf{Project Title: A Short Descriptive Subtitle}}{\mbox{\textit{Oct. 2026 -- Present}}}
+\textit{Undergraduate Thesis} \quad|\quad \textit{Advisor: Prof.\ First Last (Department, University)}
+\begin{cvitems}
+  \item \textbf{Algorithm Development:} Describe the model or method you designed, the architecture you used and what it achieved. Keep one idea per bullet and quantify results where possible.
+  \item \textbf{Core Work:} Describe the data, experiments or pipeline you built, and how you validated the results against baselines.
+\end{cvitems}
+
+\cvline{\textbf{Research Project Title}}{\mbox{\textit{May 2025 -- May 2026}}}
+\textit{National Student Research Training} \quad|\quad \textit{Advisor: Prof.\ First Last (Department, University)}
+\begin{cvitems}
+  \item \textbf{Algorithm Development:} Describe the algorithm or model you contributed.
+  \item \textbf{Core Work:} Describe the dataset, experiments and engineering work.
+  \item \textbf{Outcome:} Report the published paper, award or deliverable -- see Publications [1].
+\end{cvitems}
+
+% ============================== PUBLICATIONS ==============================
+\section*{Publications}
+
+[1] \textbf{Paper Title: With a Descriptive Subtitle.} \textit{Journal Name}. (Journal metrics) Co-first author, \textbf{under review}.
+
+[2] Author, A.; Author, B.; Author, C.* Paper Title. \textit{Journal Name}, 2026, 15(6): 875. (Journal metrics)
+
+% ========================= ACADEMIC ACTIVITIES ============================
+\section*{Academic Conferences and Overseas Exchange}
+
+% REPLACE: newest first.
+\cvline{\textbf{University, Summer / Winter School}}{\mbox{\textit{Aug. 2026}}}
+\textit{Visiting Student} \quad|\quad \textit{City, Country}
+\begin{cvitems}
+  \item \textbf{Overview:} Co-organized by the hosting institutions; focused on the topics covered by the school.
+  \item \textbf{Outcome:} Describe the workflow or project you proposed and how it was received.
+\end{cvitems}
+
+\cvline{\textbf{Conference Title \& Competition Name}}{\mbox{\textit{Aug. 2025}}}
+\textit{City, Country} \quad|\quad \textit{Organizer: Organizer Name}
+\begin{cvitems}
+  \item \textbf{Overview:} Describe the topic you exchanged views on and the problems you focused on.
+  \item \textbf{Outcome:} Presented \textit{Talk Title} on behalf of your team and won the prize in a given track.
+\end{cvitems}
+
+% ================================ SKILLS ==================================
+\section*{Technical Skills}
+
+\begin{cvitems}
+  \item \textbf{Programming:} Languages and tools you use for coding and data analysis.
+  \item \textbf{Academic Writing:} Your experience with the journal submission workflow.
+  \item \textbf{Research Skills:} Domain knowledge, methods and software you are familiar with.
+  \item \textbf{Certificates:} Language tests, computer exams or other certificates.
+\end{cvitems}
+
+% ================================ AWARDS ==================================
+\section*{Awards and Honors}
+
+\begin{cvitems}
+  \item Scholarship Name, University \hfill \mbox{2024 \& 2025}
+  \item Competition Name (Track) \hfill \mbox{2025}
+  \item Competition Name, Organizer \hfill \mbox{2024}
+\end{cvitems}
+
+\end{document}

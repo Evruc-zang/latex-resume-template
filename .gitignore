@@ -1,0 +1,24 @@
+# Built PDF at the repo root (regenerate with `xelatex resume.tex`)
+/resume.pdf
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
